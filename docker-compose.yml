@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-vantara}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vantara_secret}
+      POSTGRES_DB: ${POSTGRES_DB:-vantara_retail}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-vantara} -d ${POSTGRES_DB:-vantara_retail}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://vantara:vantara_secret@postgres:5432/vantara_retail}
+      MODEL_DIR: models_artifacts
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./models_artifacts:/app/models_artifacts
+      - ./data/processed:/app/data/processed
+
+  dashboard:
+    build: .
+    command: streamlit run frontend/dashboard.py --server.port 8501 --server.address 0.0.0.0
+    environment:
+      API_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:

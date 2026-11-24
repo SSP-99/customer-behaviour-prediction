@@ -1,0 +1,343 @@
+2026-11-24 13:00:48 | WARNING  | src.utils.seed | TensorFlow not installed; skipped TensorFlow seed initialization.
+2026-11-24 13:00:48 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:00:48 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=all | seed=42
+2026-11-24 13:00:48 | INFO     | __main__ | Stage [data] initialized | cutoff_date=2011-09-10 | interim_output=data/interim/cleaned_transactions.parquet
+2026-11-24 13:00:48 | INFO     | __main__ | Completed stage [data] in 0.00s
+2026-11-24 13:00:48 | INFO     | __main__ | Stage [features] initialized | window_days=90 | output=data/processed/customer_features.parquet
+2026-11-24 13:00:48 | INFO     | __main__ | Completed stage [features] in 0.00s
+2026-11-24 13:00:48 | INFO     | __main__ | Stage [train] initialized | cv_folds=5 | experiment_log=models_artifacts/experiment_log.csv
+2026-11-24 13:00:48 | INFO     | __main__ | Completed stage [train] in 0.00s
+2026-11-24 13:00:48 | INFO     | __main__ | Stage [segment] initialized | default_k=4 | top_n=5
+2026-11-24 13:00:48 | INFO     | __main__ | Completed stage [segment] in 0.00s
+2026-11-24 13:00:48 | INFO     | __main__ | Stage [explain] initialized | explainer_output=models_artifacts/shap_explainer.joblib
+2026-11-24 13:00:48 | INFO     | __main__ | Completed stage [explain] in 0.00s
+2026-11-24 13:00:48 | INFO     | __main__ | Pipeline execution finished | stage=all | total_time=35.72s
+2026-11-24 13:29:44 | WARNING  | src.utils.seed | TensorFlow not installed; skipped TensorFlow seed initialization.
+2026-11-24 13:29:44 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:29:44 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:29:44 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Fetching UCI dataset id=502 via ucimlrepo...
+2026-11-24 13:29:52 | WARNING  | src.utils.seed | TensorFlow not installed; skipped TensorFlow seed initialization.
+2026-11-24 13:29:52 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:29:52 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:29:52 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Fetching UCI dataset id=502 via ucimlrepo...
+2026-11-24 13:33:55 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:33:55 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:33:55 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Fetching UCI dataset id=502 via ucimlrepo...
+2026-11-24 13:35:34 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:35:34 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:35:34 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Fetching UCI dataset id=502 via ucimlrepo...
+2026-11-24 13:37:11 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:37:11 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:37:11 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:37:12 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); falling back to direct UCI download.
+2026-11-24 13:37:12 | INFO     | src.data.ingest | Downloading Online Retail II Excel (~45 MB) from https://uci.edu ...
+2026-11-24 13:37:15 | INFO     | src.data.ingest | Download complete: data\raw\online_retail_II.xlsx (0.12 MB)
+2026-11-24 13:37:15 | INFO     | src.data.ingest | Reading raw transactions from local Excel: data\raw\online_retail_II.xlsx
+2026-11-24 13:37:15 | INFO     | src.data.ingest | Reading sheet 'Year 2009-2010' (this takes ~15-20s for 500k+ rows)...
+2026-11-24 13:38:29 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:38:29 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:38:29 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:38:30 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 13:38:30 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://uci.edu ...
+2026-11-24 13:39:22 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:39:22 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:39:22 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:39:23 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 13:39:23 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://uci.edu ...
+2026-11-24 13:40:24 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:40:24 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:40:24 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:40:25 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 13:40:25 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip ...
+2026-11-24 13:45:04 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:45:04 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:45:04 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:45:05 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 13:45:05 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip ...
+2026-11-24 13:48:28 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:48:28 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:48:28 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:48:29 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 13:48:29 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip ...
+2026-11-24 13:52:16 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:52:16 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:52:16 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:52:17 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 13:52:18 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip ...
+2026-11-24 13:56:49 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 13:56:49 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 13:56:49 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 13:56:50 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 13:56:50 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip ...
+2026-11-24 14:01:12 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 14:01:12 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 14:01:12 | INFO     | src.data.ingest | Local Excel not found at data\raw\online_retail_II.xlsx. Trying ucimlrepo id=502...
+2026-11-24 14:01:12 | WARNING  | src.data.ingest | ucimlrepo unavailable for id=502 ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); downloading official UCI ZIP.
+2026-11-24 14:01:12 | INFO     | src.data.ingest | Downloading Online Retail II ZIP (~45 MB) from https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip ...
+2026-11-24 14:03:45 | INFO     | src.data.ingest | Extracted Excel workbook to data\raw\online_retail_II.xlsx (45.62 MB)
+2026-11-24 14:03:45 | INFO     | src.data.ingest | Reading raw transactions from local Excel: data\raw\online_retail_II.xlsx
+2026-11-24 14:03:45 | INFO     | src.data.ingest | Reading sheet 'Year 2009-2010' (this takes ~15-20s for 500k+ rows)...
+2026-11-24 14:04:14 | INFO     | src.data.ingest | Reading sheet 'Year 2010-2011' (this takes ~15-20s for 500k+ rows)...
+2026-11-24 14:04:52 | INFO     | src.data.ingest | Loaded 1067371 total raw rows and cached to data\raw\online_retail_II_raw.parquet
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column Invoice      | null_rate = 0.0000
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column StockCode    | null_rate = 0.0000
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column Description  | null_rate = 0.0041
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column Quantity     | null_rate = 0.0000
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column InvoiceDate  | null_rate = 0.0000
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column Price        | null_rate = 0.0000
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column Customer ID  | null_rate = 0.2277
+2026-11-24 14:04:52 | INFO     | src.data.validate | Column Country      | null_rate = 0.0000
+2026-11-24 14:04:52 | INFO     | src.data.validate | Raw schema validation passed | total_rows=1067371
+2026-11-24 14:04:52 | INFO     | src.data.clean | Dropped 0 rows with invalid InvoiceDate/Quantity/Price
+2026-11-24 14:04:53 | INFO     | src.data.clean | Dropped 34335 exact duplicate rows
+2026-11-24 14:04:53 | INFO     | src.data.clean | Dropped 5713 non-product StockCode rows
+2026-11-24 14:04:53 | INFO     | src.data.clean | Dropped 5990 rows with invalid price (< 0.01) or zero quantity
+2026-11-24 14:04:53 | INFO     | src.data.clean | Cleaning complete | initial=1067371 | final=1021333 | returns=17915 (1.75%) | with_customer_id=794165
+2026-11-24 14:04:54 | INFO     | src.data.clean | Saved cleaned transactions (1021333 rows) to data\interim\cleaned_transactions.parquet
+2026-11-24 14:04:54 | INFO     | __main__ | Pipeline execution finished | stage=data | total_time=225.99s
+2026-11-24 14:10:28 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 14:10:28 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 14:10:28 | INFO     | src.data.ingest | Loading cached raw Parquet from: data\raw\online_retail_II_raw.parquet
+2026-11-24 14:10:33 | INFO     | src.data.ingest | Loaded 1067371 total raw rows from cached Parquet.
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column Invoice      | null_rate = 0.0000
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column StockCode    | null_rate = 0.0000
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column Description  | null_rate = 0.0041
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column Quantity     | null_rate = 0.0000
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column InvoiceDate  | null_rate = 0.0000
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column Price        | null_rate = 0.0000
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column Customer ID  | null_rate = 0.2277
+2026-11-24 14:10:34 | INFO     | src.data.validate | Column Country      | null_rate = 0.0000
+2026-11-24 14:10:34 | INFO     | src.data.validate | Raw schema validation passed | total_rows=1067371
+2026-11-24 14:10:34 | INFO     | src.data.clean | Dropped 0 rows with invalid InvoiceDate/Quantity/Price
+2026-11-24 14:10:34 | INFO     | src.data.clean | Dropped 34335 exact duplicate rows
+2026-11-24 14:10:35 | INFO     | src.data.clean | Dropped 5713 non-product StockCode rows
+2026-11-24 14:10:35 | INFO     | src.data.clean | Dropped 5990 rows with invalid price (< 0.01) or zero quantity
+2026-11-24 14:10:35 | INFO     | src.data.clean | Cleaning complete | initial=1067371 | final=1021333 | returns=17915 (1.75%) | with_customer_id=794165
+2026-11-24 14:10:35 | INFO     | src.data.clean | Saved cleaned transactions (1021333 rows) to data\interim\cleaned_transactions.parquet
+2026-11-24 14:10:35 | INFO     | __main__ | Pipeline execution finished | stage=data | total_time=11.54s
+2026-11-24 19:38:49 | INFO     | src.data.cleaning | remove_exact_duplicates | before=7 | after=6 | removed=1
+2026-11-24 19:38:49 | INFO     | src.data.cleaning | flag_returns | total=7 | returns=1 (14.29%)
+2026-11-24 19:38:49 | INFO     | src.data.cleaning | filter_non_product_codes | before=7 | after=6 | removed=1
+2026-11-24 19:38:49 | INFO     | src.data.cleaning | detect_outliers | total=7 | bulk_orders=1 | data_errors_removed=1 | flagged_total=2
+2026-11-24 19:38:49 | INFO     | src.data.cleaning | handle_bad_prices | before=7 | after=7 | removed=0
+2026-11-24 19:38:49 | INFO     | src.data.cleaning | standardize_descriptions | unique_stock_codes=4
+2026-11-24 19:38:49 | INFO     | src.data.cleaning | flag_missing_customers | product_rows=7 | customer_rows=6 | unique_customers=2
+2026-11-24 19:40:01 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 19:40:01 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=data | seed=42
+2026-11-24 19:40:01 | INFO     | src.data.loader | Attempting to load dataset id=502 via ucimlrepo...
+2026-11-24 19:40:02 | WARNING  | src.data.loader | ucimlrepo unavailable ("Online Retail II" dataset (id=502) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true); falling back to local Excel.
+2026-11-24 19:40:02 | INFO     | src.data.loader | Loading raw rows from cached archive data\raw\online_retail_II_raw.parquet
+2026-11-24 19:40:08 | INFO     | src.data.loader | Saved 1067371 rows to Parquet: data\interim\raw_combined.parquet
+2026-11-24 19:40:08 | INFO     | src.data.pipeline | Audit | load_raw_data                | before=1067371 | after=1067371 | diff=     +0
+2026-11-24 19:40:08 | INFO     | src.data.validation | Validation [pre_cleaning] PASSED | rows=1067371 | range=[2009-12-01 07:45:00 .. 2011-12-09 12:50:00]
+2026-11-24 19:40:09 | INFO     | src.data.cleaning | remove_exact_duplicates | before=1067371 | after=1033036 | removed=34335
+2026-11-24 19:40:09 | INFO     | src.data.pipeline | Audit | remove_exact_duplicates      | before=1067371 | after=1033036 | diff= -34335
+2026-11-24 19:40:10 | INFO     | src.data.cleaning | handle_bad_prices | before=1033036 | after=1026999 | removed=6037
+2026-11-24 19:40:10 | INFO     | src.data.pipeline | Audit | handle_bad_prices            | before=1033036 | after=1026999 | diff=  -6037
+2026-11-24 19:40:10 | INFO     | src.data.cleaning | flag_returns | total=1026999 | returns=19104 (1.86%)
+2026-11-24 19:40:10 | INFO     | src.data.pipeline | Audit | flag_returns                 | before=1026999 | after=1026999 | diff=     +0
+2026-11-24 19:40:13 | INFO     | src.data.cleaning | standardize_descriptions | unique_stock_codes=4760
+2026-11-24 19:40:13 | INFO     | src.data.pipeline | Audit | standardize_descriptions     | before=1026999 | after=1026999 | diff=     +0
+2026-11-24 19:40:13 | INFO     | src.data.cleaning | detect_outliers | total=1026999 | bulk_orders=13812 | data_errors_removed=27 | flagged_total=64397
+2026-11-24 19:40:13 | INFO     | src.data.pipeline | Audit | detect_outliers              | before=1026999 | after=1026972 | diff=    -27
+2026-11-24 19:40:15 | INFO     | src.data.cleaning | flag_missing_customers | product_rows=1026972 | customer_rows=797785 | unique_customers=5937
+2026-11-24 19:40:15 | INFO     | src.data.pipeline | Audit | flag_missing_customers       | before=1026972 | after= 797785 | diff=-229187
+2026-11-24 19:40:15 | INFO     | src.data.cleaning | filter_non_product_codes | before=1026972 | after=1021328 | removed=5644
+2026-11-24 19:40:15 | INFO     | src.data.pipeline | Audit | filter_non_product_codes     | before=1026972 | after=1021328 | diff=  -5644
+2026-11-24 19:40:15 | INFO     | src.data.validation | Validation [post_cleaning_customer] PASSED | rows=797785 | range=[2009-12-01 07:45:00 .. 2011-12-09 12:50:00]
+2026-11-24 19:40:15 | INFO     | src.data.validation | Validation [post_cleaning_product] PASSED | rows=1021328 | range=[2009-12-01 07:45:00 .. 2011-12-09 12:50:00]
+2026-11-24 19:40:17 | INFO     | src.data.pipeline | Saved cleaning audit report to data\interim\cleaning_audit.json
+2026-11-24 19:40:17 | INFO     | __main__ | Data stage summary: {'raw_rows': 1067371, 'customer_rows': 797785, 'unique_customers': 5937, 'product_rows': 1021328, 'unique_products': 4744, 'customer_return_rows': 18382, 'bulk_order_rows': 13461}
+2026-11-24 19:40:17 | INFO     | __main__ | Pipeline execution finished | stage=data | total_time=86.54s
+2026-11-24 20:02:58 | INFO     | src.data.cleaning | remove_exact_duplicates | before=7 | after=6 | removed=1
+2026-11-24 20:02:58 | INFO     | src.data.cleaning | flag_returns | total=7 | returns=1 (14.29%)
+2026-11-24 20:02:58 | INFO     | src.data.cleaning | filter_non_product_codes | before=7 | after=6 | removed=1
+2026-11-24 20:02:58 | INFO     | src.data.cleaning | detect_outliers | total=7 | bulk_orders=1 | data_errors_removed=1 | flagged_total=2
+2026-11-24 20:02:58 | INFO     | src.data.cleaning | handle_bad_prices | before=7 | after=7 | removed=0
+2026-11-24 20:02:58 | INFO     | src.data.cleaning | standardize_descriptions | unique_stock_codes=4
+2026-11-24 20:02:58 | INFO     | src.data.cleaning | flag_missing_customers | product_rows=7 | customer_rows=6 | unique_customers=2
+2026-11-24 20:02:58 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=499999.50
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:02:59 | INFO     | src.features.engineering | Built product association rules | pairs=0
+2026-11-24 20:03:08 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 20:03:08 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=features | seed=42
+2026-11-24 20:03:08 | INFO     | src.data.validation | Validation [pre_features_customer] PASSED | rows=797785 | range=[2009-12-01 07:45:00 .. 2011-12-09 12:50:00]
+2026-11-24 20:03:08 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=635793 | future_rows=161376
+2026-11-24 20:03:11 | INFO     | src.features.engineering | Built customer dataset | customers=5280 | features=34 | churn_rate=56.63% | mean_clv_90d=523.03
+2026-11-24 20:03:19 | INFO     | src.features.engineering | Built product association rules | pairs=221374
+2026-11-24 20:03:19 | INFO     | src.features.preprocessing | Stratified split complete | train=3696 (70.0%) | val=792 (15.0%) | test=792 (15.0%)
+2026-11-24 20:03:19 | INFO     | src.features.preprocessing | Saved fitted preprocessor to models_artifacts\preprocessor.joblib (40 transformed features)
+2026-11-24 20:03:19 | INFO     | src.features.pipeline | Saved processed customer features (5280 rows) to data\processed\customer_features.parquet
+2026-11-24 20:03:19 | INFO     | src.features.pipeline | Saved product associations (221374 pairs) to data\processed\product_associations.parquet
+2026-11-24 20:03:19 | INFO     | __main__ | Features stage complete | shape=(5280, 38)
+2026-11-24 20:03:19 | INFO     | __main__ | Pipeline execution finished | stage=features | total_time=18.12s
+2026-11-24 20:17:01 | INFO     | src.data.cleaning | remove_exact_duplicates | before=7 | after=6 | removed=1
+2026-11-24 20:17:01 | INFO     | src.data.cleaning | flag_returns | total=7 | returns=1 (14.29%)
+2026-11-24 20:17:01 | INFO     | src.data.cleaning | filter_non_product_codes | before=7 | after=6 | removed=1
+2026-11-24 20:17:01 | INFO     | src.data.cleaning | detect_outliers | total=7 | bulk_orders=1 | data_errors_removed=1 | flagged_total=2
+2026-11-24 20:17:01 | INFO     | src.data.cleaning | handle_bad_prices | before=7 | after=7 | removed=0
+2026-11-24 20:17:01 | INFO     | src.data.cleaning | standardize_descriptions | unique_stock_codes=4
+2026-11-24 20:17:01 | INFO     | src.data.cleaning | flag_missing_customers | product_rows=7 | customer_rows=6 | unique_customers=2
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=499999.50
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:17:02 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:17:03 | INFO     | src.features.engineering | Built product association rules | pairs=0
+2026-11-24 20:17:20 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 20:17:20 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=train | seed=42
+2026-11-24 20:17:20 | INFO     | src.models.pipeline | Loaded processed features (5280 rows) for model training.
+2026-11-24 20:17:24 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=logistic_regression | split=cv_train | time=3.50s | metrics={"accuracy": 0.709948, "f1": 0.756906, "fn": 85.0, "fp": 129.4, "precision": 0.7211, "recall": 0.796949, "roc_auc": 0.758079, "tn": 191.2, "tp": 333.6}
+2026-11-24 20:17:24 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=logistic_regression | split=validation | time=0.17s | metrics={"accuracy": 0.607323, "f1": 0.725022, "fn": 38.0, "fp": 273.0, "precision": 0.600293, "recall": 0.915179, "roc_auc": 0.500396, "tn": 71.0, "tp": 410.0}
+2026-11-24 20:18:29 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=xgboost | split=cv_train | time=65.36s | metrics={"accuracy": 0.727004, "f1": 0.770797, "fn": 79.2, "fp": 122.6, "precision": 0.734724, "recall": 0.810805, "roc_auc": 0.795934, "tn": 198.0, "tp": 339.4}
+2026-11-24 20:18:30 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=xgboost | split=validation | time=0.61s | metrics={"accuracy": 0.738636, "f1": 0.78415, "fn": 72.0, "fp": 135.0, "precision": 0.735812, "recall": 0.839286, "roc_auc": 0.811339, "tn": 209.0, "tp": 376.0}
+2026-11-24 20:19:06 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=lightgbm | split=cv_train | time=36.37s | metrics={"accuracy": 0.721045, "f1": 0.764765, "fn": 83.2, "fp": 123.0, "precision": 0.731751, "recall": 0.801248, "roc_auc": 0.780136, "tn": 197.6, "tp": 335.4}
+2026-11-24 20:19:07 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=lightgbm | split=validation | time=0.49s | metrics={"accuracy": 0.713384, "f1": 0.761805, "fn": 85.0, "fp": 142.0, "precision": 0.718812, "recall": 0.810268, "roc_auc": 0.79134, "tn": 202.0, "tp": 363.0}
+2026-11-24 20:20:52 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=catboost | split=cv_train | time=105.41s | metrics={"accuracy": 0.730247, "f1": 0.773684, "fn": 77.6, "fp": 121.8, "precision": 0.736906, "recall": 0.81462, "roc_auc": 0.798742, "tn": 198.8, "tp": 341.0}
+2026-11-24 20:20:55 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=catboost | split=validation | time=2.68s | metrics={"accuracy": 0.734848, "f1": 0.782158, "fn": 71.0, "fp": 139.0, "precision": 0.73062, "recall": 0.841518, "roc_auc": 0.80618, "tn": 205.0, "tp": 377.0}
+2026-11-24 20:47:47 | INFO     | src.data.cleaning | remove_exact_duplicates | before=7 | after=6 | removed=1
+2026-11-24 20:47:47 | INFO     | src.data.cleaning | flag_returns | total=7 | returns=1 (14.29%)
+2026-11-24 20:47:47 | INFO     | src.data.cleaning | filter_non_product_codes | before=7 | after=6 | removed=1
+2026-11-24 20:47:47 | INFO     | src.data.cleaning | detect_outliers | total=7 | bulk_orders=1 | data_errors_removed=1 | flagged_total=2
+2026-11-24 20:47:47 | INFO     | src.data.cleaning | handle_bad_prices | before=7 | after=7 | removed=0
+2026-11-24 20:47:47 | INFO     | src.data.cleaning | standardize_descriptions | unique_stock_codes=4
+2026-11-24 20:47:47 | INFO     | src.data.cleaning | flag_missing_customers | product_rows=7 | customer_rows=6 | unique_customers=2
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=499999.50
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 20:47:47 | INFO     | src.features.engineering | Built product association rules | pairs=0
+2026-11-24 20:47:47 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 20:47:47 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 20:47:48 | INFO     | src.features.labels | Labels summary | customers=2 | churned=1 (50.00%) | retained=1 (50.00%) | mean_future_spend=30.00
+2026-11-24 20:47:48 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 20:47:48 | INFO     | src.features.encoding | Saved encoding artifacts to C:\Users\P N Sudheer\AppData\Local\Temp\pytest-of-P N Sudheer\pytest-0\test_encoding_and_scaler_fit_t0\encoders.joblib and C:\Users\P N Sudheer\AppData\Local\Temp\pytest-of-P N Sudheer\pytest-0\test_encoding_and_scaler_fit_t0\scaler.joblib
+2026-11-24 21:07:03 | INFO     | src.data.cleaning | remove_exact_duplicates | before=7 | after=6 | removed=1
+2026-11-24 21:07:03 | INFO     | src.data.cleaning | flag_returns | total=7 | returns=1 (14.29%)
+2026-11-24 21:07:03 | INFO     | src.data.cleaning | filter_non_product_codes | before=7 | after=6 | removed=1
+2026-11-24 21:07:03 | INFO     | src.data.cleaning | detect_outliers | total=7 | bulk_orders=1 | data_errors_removed=1 | flagged_total=2
+2026-11-24 21:07:03 | INFO     | src.data.cleaning | handle_bad_prices | before=7 | after=7 | removed=0
+2026-11-24 21:07:03 | INFO     | src.data.cleaning | standardize_descriptions | unique_stock_codes=4
+2026-11-24 21:07:03 | INFO     | src.data.cleaning | flag_missing_customers | product_rows=7 | customer_rows=6 | unique_customers=2
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=499999.50
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 21:07:03 | INFO     | src.features.engineering | Built product association rules | pairs=0
+2026-11-24 21:07:41 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 21:07:41 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 21:07:41 | INFO     | src.features.labels | Labels summary | customers=2 | churned=1 (50.00%) | retained=1 (50.00%) | mean_future_spend=30.00
+2026-11-24 21:07:41 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 21:07:41 | INFO     | src.features.encoding | Saved encoding artifacts to C:\Users\P N Sudheer\AppData\Local\Temp\pytest-of-P N Sudheer\pytest-1\test_encoding_and_scaler_fit_t0\encoders.joblib and C:\Users\P N Sudheer\AppData\Local\Temp\pytest-of-P N Sudheer\pytest-1\test_encoding_and_scaler_fit_t0\scaler.joblib
+2026-11-24 21:07:48 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:07:48 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=segment | seed=42
+2026-11-24 21:07:50 | INFO     | src.segmentation.pipeline | Saved scored customer segments to data\processed\customer_segments.parquet
+2026-11-24 21:07:51 | INFO     | src.segmentation.recommender | Saved ProductRecommender (500 products) to models_artifacts\product_recommender.joblib
+2026-11-24 21:07:51 | INFO     | __main__ | Segment stage complete | k=4 | personas={1: 'Champions', 3: 'Loyal Customers', 0: 'At-Risk High-Value', 2: 'Hibernating / Lost'} | indexed_products=500
+2026-11-24 21:07:51 | INFO     | __main__ | Pipeline execution finished | stage=segment | total_time=2.75s
+2026-11-24 21:07:57 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:07:57 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=explain | seed=42
+2026-11-24 21:16:37 | INFO     | src.features.behavioral | Wrote feature dictionary to docs\feature_dictionary.md
+2026-11-24 21:19:33 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:19:33 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=train | seed=42
+2026-11-24 21:19:33 | INFO     | src.models.pipeline | Loaded processed features (5280 rows) for model training.
+2026-11-24 21:19:34 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=logistic_regression | split=cv_train | time=0.85s | metrics={"accuracy": 0.709948, "f1": 0.756906, "fn": 85.0, "fp": 129.4, "precision": 0.7211, "recall": 0.796949, "roc_auc": 0.758079, "tn": 191.2, "tp": 333.6}
+2026-11-24 21:19:34 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=logistic_regression | split=validation | time=0.05s | metrics={"accuracy": 0.607323, "f1": 0.725022, "fn": 38.0, "fp": 273.0, "precision": 0.600293, "recall": 0.915179, "roc_auc": 0.500396, "tn": 71.0, "tp": 410.0}
+2026-11-24 21:20:08 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=xgboost | split=cv_train | time=33.62s | metrics={"accuracy": 0.727004, "f1": 0.770797, "fn": 79.2, "fp": 122.6, "precision": 0.734724, "recall": 0.810805, "roc_auc": 0.795934, "tn": 198.0, "tp": 339.4}
+2026-11-24 21:20:08 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=xgboost | split=validation | time=0.51s | metrics={"accuracy": 0.738636, "f1": 0.78415, "fn": 72.0, "fp": 135.0, "precision": 0.735812, "recall": 0.839286, "roc_auc": 0.811339, "tn": 209.0, "tp": 376.0}
+2026-11-24 21:20:42 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=lightgbm | split=cv_train | time=33.27s | metrics={"accuracy": 0.721045, "f1": 0.764765, "fn": 83.2, "fp": 123.0, "precision": 0.731751, "recall": 0.801248, "roc_auc": 0.780136, "tn": 197.6, "tp": 335.4}
+2026-11-24 21:20:42 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=lightgbm | split=validation | time=0.41s | metrics={"accuracy": 0.713384, "f1": 0.761805, "fn": 85.0, "fp": 142.0, "precision": 0.718812, "recall": 0.810268, "roc_auc": 0.79134, "tn": 202.0, "tp": 363.0}
+2026-11-24 21:22:18 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=catboost | split=cv_train | time=95.87s | metrics={"accuracy": 0.730247, "f1": 0.773684, "fn": 77.6, "fp": 121.8, "precision": 0.736906, "recall": 0.81462, "roc_auc": 0.798742, "tn": 198.8, "tp": 341.0}
+2026-11-24 21:22:20 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=catboost | split=validation | time=2.34s | metrics={"accuracy": 0.734848, "f1": 0.782158, "fn": 71.0, "fp": 139.0, "precision": 0.73062, "recall": 0.841518, "roc_auc": 0.80618, "tn": 205.0, "tp": 377.0}
+2026-11-24 21:22:26 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:22:26 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=segment | seed=42
+2026-11-24 21:22:27 | INFO     | src.segmentation.pipeline | Saved scored customer segments to data\processed\customer_segments.parquet
+2026-11-24 21:22:29 | INFO     | src.segmentation.recommender | Saved ProductRecommender (500 products) to models_artifacts\product_recommender.joblib
+2026-11-24 21:22:29 | INFO     | __main__ | Segment stage complete | k=4 | personas={1: 'Champions', 3: 'Loyal Customers', 0: 'At-Risk High-Value', 2: 'Hibernating / Lost'} | indexed_products=500
+2026-11-24 21:22:29 | INFO     | __main__ | Pipeline execution finished | stage=segment | total_time=2.53s
+2026-11-24 21:22:34 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:22:34 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=explain | seed=42
+2026-11-24 21:23:43 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:23:43 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=train | seed=42
+2026-11-24 21:23:43 | INFO     | src.models.pipeline | Loaded processed features (5280 rows) for model training.
+2026-11-24 21:23:43 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=logistic_regression | split=cv_train | time=0.87s | metrics={"accuracy": 0.709948, "f1": 0.756906, "fn": 85.0, "fp": 129.4, "precision": 0.7211, "recall": 0.796949, "roc_auc": 0.758079, "tn": 191.2, "tp": 333.6}
+2026-11-24 21:23:44 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=logistic_regression | split=validation | time=0.06s | metrics={"accuracy": 0.607323, "f1": 0.725022, "fn": 38.0, "fp": 273.0, "precision": 0.600293, "recall": 0.915179, "roc_auc": 0.500396, "tn": 71.0, "tp": 410.0}
+2026-11-24 21:24:20 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=xgboost | split=cv_train | time=35.98s | metrics={"accuracy": 0.727004, "f1": 0.770797, "fn": 79.2, "fp": 122.6, "precision": 0.734724, "recall": 0.810805, "roc_auc": 0.795934, "tn": 198.0, "tp": 339.4}
+2026-11-24 21:24:20 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=xgboost | split=validation | time=0.52s | metrics={"accuracy": 0.738636, "f1": 0.78415, "fn": 72.0, "fp": 135.0, "precision": 0.735812, "recall": 0.839286, "roc_auc": 0.811339, "tn": 209.0, "tp": 376.0}
+2026-11-24 21:24:51 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=lightgbm | split=cv_train | time=30.76s | metrics={"accuracy": 0.721045, "f1": 0.764765, "fn": 83.2, "fp": 123.0, "precision": 0.731751, "recall": 0.801248, "roc_auc": 0.780136, "tn": 197.6, "tp": 335.4}
+2026-11-24 21:24:51 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=lightgbm | split=validation | time=0.37s | metrics={"accuracy": 0.713384, "f1": 0.761805, "fn": 85.0, "fp": 142.0, "precision": 0.718812, "recall": 0.810268, "roc_auc": 0.79134, "tn": 202.0, "tp": 363.0}
+2026-11-24 21:26:23 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=catboost | split=cv_train | time=91.80s | metrics={"accuracy": 0.730247, "f1": 0.773684, "fn": 77.6, "fp": 121.8, "precision": 0.736906, "recall": 0.81462, "roc_auc": 0.798742, "tn": 198.8, "tp": 341.0}
+2026-11-24 21:26:25 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=catboost | split=validation | time=2.43s | metrics={"accuracy": 0.734848, "f1": 0.782158, "fn": 71.0, "fp": 139.0, "precision": 0.73062, "recall": 0.841518, "roc_auc": 0.80618, "tn": 205.0, "tp": 377.0}
+2026-11-24 21:27:08 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=keras_mlp | split=cv_train | time=42.47s | metrics={"accuracy": 0.724829, "f1": 0.768921, "fn": 79.6, "fp": 123.8, "precision": 0.733187, "recall": 0.80985, "roc_auc": 0.786092, "tn": 196.8, "tp": 339.0}
+2026-11-24 21:27:19 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=keras_mlp | split=validation | time=10.36s | metrics={"accuracy": 0.733586, "f1": 0.789631, "fn": 52.0, "fp": 159.0, "precision": 0.713514, "recall": 0.883929, "roc_auc": 0.801943, "tn": 185.0, "tp": 396.0}
+2026-11-24 21:27:19 | INFO     | src.utils.experiment_log | Logged experiment | task=churn | model=xgboost | split=test | time=0.52s | metrics={"accuracy": 0.737374, "f1": 0.781513, "fn": 77.0, "fp": 131.0, "precision": 0.739563, "recall": 0.828508, "roc_auc": 0.821359, "tn": 212.0, "tp": 372.0}
+2026-11-24 21:27:19 | INFO     | src.models.train_churn | Saved best churn model (xgboost) to models_artifacts\best_churn_model.joblib | test_roc_auc=0.8214 | test_recall=0.8285
+2026-11-24 21:27:19 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=ridge | split=cv_train | time=0.02s | metrics={"mae": 3558.3369, "r2": -726.676181, "rmse": 73940.882364}
+2026-11-24 21:27:19 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=ridge | split=validation | time=0.00s | metrics={"mae": 5200.520657, "r2": -6490.226281, "rmse": 117632.772253}
+2026-11-24 21:28:02 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=xgboost | split=cv_train | time=43.07s | metrics={"mae": 434.601511, "r2": 0.249748, "rmse": 2389.557373}
+2026-11-24 21:28:03 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=xgboost | split=validation | time=0.99s | metrics={"mae": 309.320179, "r2": 0.711196, "rmse": 784.633028}
+2026-11-24 21:28:33 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=lightgbm | split=cv_train | time=30.16s | metrics={"mae": 429.601868, "r2": 0.282487, "rmse": 2304.93605}
+2026-11-24 21:28:34 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=lightgbm | split=validation | time=0.67s | metrics={"mae": 316.018529, "r2": 0.671656, "rmse": 836.622054}
+2026-11-24 21:29:10 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=keras_mlp | split=cv_train | time=36.48s | metrics={"mae": 9164.541129, "r2": -2288.595623, "rmse": 136509.204149}
+2026-11-24 21:29:20 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=keras_mlp | split=validation | time=10.24s | metrics={"mae": 12164.27845, "r2": -17306.427541, "rmse": 192079.589481}
+2026-11-24 21:29:20 | INFO     | src.utils.experiment_log | Logged experiment | task=clv | model=xgboost | split=test | time=0.99s | metrics={"mae": 487.513728, "r2": 0.199668, "rmse": 4056.932574}
+2026-11-24 21:29:20 | INFO     | src.models.train_clv | Saved best CLV model (xgboost) to models_artifacts\best_clv_model.joblib | test_r2=0.1997 | test_mae=487.51
+2026-11-24 21:29:20 | INFO     | src.models.pipeline | Training pipeline summary: {'churn': {'best_model_name': 'xgboost', 'val_metrics': {'accuracy': 0.7386363636363636, 'precision': 0.735812133072407, 'recall': 0.8392857142857143, 'f1': 0.7841501564129301, 'roc_auc': 0.8113385070598007, 'tp': 376.0, 'fp': 135.0, 'tn': 209.0, 'fn': 72.0}, 'test_metrics': {'accuracy': 0.7373737373737373, 'precision': 0.7395626242544732, 'recall': 0.8285077951002228, 'f1': 0.7815126050420168, 'roc_auc': 0.8213587694065854, 'tp': 372.0, 'fp': 131.0, 'tn': 212.0, 'fn': 77.0}}, 'clv': {'best_model_name': 'xgboost', 'val_metrics': {'mae': 309.32017919004693, 'rmse': 784.6330283913574, 'r2': 0.7111959659994218}, 'test_metrics': {'mae': 487.5137282367904, 'rmse': 4056.932573975884, 'r2': 0.19966831396865048}}, 'experiment_log': 'models_artifacts\\experiment_log.csv'}
+2026-11-24 21:29:20 | INFO     | __main__ | Train stage complete | best_churn=xgboost | best_clv=xgboost
+2026-11-24 21:29:20 | INFO     | __main__ | Pipeline execution finished | stage=train | total_time=337.91s
+2026-11-24 21:29:26 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:29:26 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=segment | seed=42
+2026-11-24 21:29:27 | INFO     | src.segmentation.pipeline | Saved scored customer segments to data\processed\customer_segments.parquet
+2026-11-24 21:29:29 | INFO     | src.segmentation.recommender | Saved ProductRecommender (500 products) to models_artifacts\product_recommender.joblib
+2026-11-24 21:29:29 | INFO     | __main__ | Segment stage complete | k=4 | personas={1: 'Champions', 3: 'Loyal Customers', 0: 'At-Risk High-Value', 2: 'Hibernating / Lost'} | indexed_products=500
+2026-11-24 21:29:29 | INFO     | __main__ | Pipeline execution finished | stage=segment | total_time=2.13s
+2026-11-24 21:29:34 | INFO     | src.utils.seed | Global random seed fixed to 42
+2026-11-24 21:29:34 | INFO     | __main__ | Starting Vantara Customer Behavior Prediction Platform | stage=explain | seed=42
+2026-11-24 21:29:43 | INFO     | src.explainability.shap_lime | Saved global feature importance chart to docs\figures\global_feature_importance.png
+2026-11-24 21:29:43 | INFO     | src.explainability.shap_lime | Saved CustomerExplainer artifact to models_artifacts\shap_explainer.joblib
+2026-11-24 21:29:43 | INFO     | src.explainability.pipeline | Top 5 global churn features: [{'feature': 'purchase_frequency_per_month', 'mean_abs_shap': 0.418186}, {'feature': 'recency_days', 'mean_abs_shap': 0.326818}, {'feature': 'unique_products', 'mean_abs_shap': 0.137869}, {'feature': 'active_span_days', 'mean_abs_shap': 0.097883}, {'feature': 'monetary_net', 'mean_abs_shap': 0.092672}]
+2026-11-24 21:29:43 | INFO     | __main__ | Explain stage complete | model=xgboost
+2026-11-24 21:29:43 | INFO     | __main__ | Pipeline execution finished | stage=explain | total_time=9.14s
+2026-11-24 21:37:28 | INFO     | __main__ | Precomputed SHAP narratives for 5280 customers at data\processed\shap_values.parquet
+2026-11-24 21:41:19 | INFO     | __main__ | Generated model comparison report & metadata | KPIs={'churn_roc_auc_ge_0.80': 'PASS', 'churn_recall_ge_0.70': 'PASS', 'clv_r2_ge_0.60': 'FAIL'}
+2026-11-24 21:45:18 | INFO     | __main__ | Precomputed SHAP narratives for 5280 customers at data\processed\shap_values.parquet
+2026-11-24 21:57:54 | INFO     | database.db | Initialized SQLite prediction store at data\interim\vantara_predictions.db
+2026-11-24 21:57:57 | INFO     | src.data.cleaning | remove_exact_duplicates | before=7 | after=6 | removed=1
+2026-11-24 21:57:57 | INFO     | src.data.cleaning | flag_returns | total=7 | returns=1 (14.29%)
+2026-11-24 21:57:57 | INFO     | src.data.cleaning | filter_non_product_codes | before=7 | after=6 | removed=1
+2026-11-24 21:57:57 | INFO     | src.data.cleaning | detect_outliers | total=7 | bulk_orders=1 | data_errors_removed=1 | flagged_total=2
+2026-11-24 21:57:57 | INFO     | src.data.cleaning | handle_bad_prices | before=7 | after=7 | removed=0
+2026-11-24 21:57:57 | INFO     | src.data.cleaning | standardize_descriptions | unique_stock_codes=4
+2026-11-24 21:57:57 | INFO     | src.data.cleaning | flag_missing_customers | product_rows=7 | customer_rows=6 | unique_customers=2
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=499999.50
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Point-in-time split | cutoff=2011-09-10 | window_end=2011-12-09 | hist_rows=3 | future_rows=1
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Built customer dataset | customers=2 | features=34 | churn_rate=50.00% | mean_clv_90d=100.00
+2026-11-24 21:57:57 | INFO     | src.features.engineering | Built product association rules | pairs=0
+2026-11-24 21:57:57 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 21:57:57 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 21:57:57 | INFO     | src.features.labels | Labels summary | customers=2 | churned=1 (50.00%) | retained=1 (50.00%) | mean_future_spend=30.00
+2026-11-24 21:57:57 | INFO     | src.data.snapshot | Built point-in-time snapshot | cutoff=2011-09-10 | window_end=2011-12-09 | history_rows=2 | future_rows=3
+2026-11-24 21:57:58 | INFO     | src.features.encoding | Saved encoding artifacts to C:\Users\P N Sudheer\AppData\Local\Temp\pytest-of-P N Sudheer\pytest-2\test_encoding_and_scaler_fit_t0\encoders.joblib and C:\Users\P N Sudheer\AppData\Local\Temp\pytest-of-P N Sudheer\pytest-2\test_encoding_and_scaler_fit_t0\scaler.joblib
+2026-11-24 21:58:00 | INFO     | database.db | Initialized SQLite prediction store at data\interim\vantara_predictions.db

@@ -1,0 +1,6 @@
+task,model_name,split,train_time_sec,accuracy,f1,fn,fp,precision,recall,roc_auc,tn,tp,mae,r2,rmse
+churn,xgboost,validation,0.516,0.738636,0.78415,72.0,135.0,0.735812,0.839286,0.811339,209.0,376.0,,,
+churn,catboost,validation,2.4322,0.734848,0.782158,71.0,139.0,0.73062,0.841518,0.80618,205.0,377.0,,,
+churn,keras_mlp,validation,10.3563,0.733586,0.789631,52.0,159.0,0.713514,0.883929,0.801943,185.0,396.0,,,
+churn,lightgbm,validation,0.3707,0.713384,0.761805,85.0,142.0,0.718812,0.810268,0.79134,202.0,363.0,,,
+churn,logistic_regression,validation,0.0582,0.607323,0.725022,38.0,273.0,0.600293,0.915179,0.500396,71.0,410.0,,,

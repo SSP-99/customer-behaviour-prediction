@@ -1,0 +1,128 @@
+{
+  "generated_at_utc": "2026-11-24T14:10:17.061484+00:00",
+  "outputs": {
+    "customer_table": "data\\interim\\customer_transactions.parquet",
+    "product_table": "data\\interim\\product_transactions.parquet",
+    "flagged_outliers_table": "data\\interim\\flagged_outliers.parquet"
+  },
+  "summary": {
+    "raw_rows": 1067371,
+    "customer_rows": 797785,
+    "unique_customers": 5937,
+    "product_rows": 1021328,
+    "unique_products": 4744,
+    "customer_return_rows": 18382,
+    "bulk_order_rows": 13461
+  },
+  "steps": [
+    {
+      "step": "load_raw_data",
+      "rows_before": 1067371,
+      "rows_after": 1067371,
+      "rows_removed": 0,
+      "notes": "Concatenated & standardized raw sheets"
+    },
+    {
+      "step": "remove_exact_duplicates",
+      "rows_before": 1067371,
+      "rows_after": 1033036,
+      "rows_removed": 34335,
+      "notes": "Exact 8-col duplicates removed: 34335"
+    },
+    {
+      "step": "handle_bad_prices",
+      "rows_before": 1033036,
+      "rows_after": 1026999,
+      "rows_removed": 6037,
+      "notes": "Price >= 0.01"
+    },
+    {
+      "step": "flag_returns",
+      "rows_before": 1026999,
+      "rows_after": 1026999,
+      "rows_removed": 0,
+      "notes": "Retained 19104 return rows with signed line_total"
+    },
+    {
+      "step": "standardize_descriptions",
+      "rows_before": 1026999,
+      "rows_after": 1026999,
+      "rows_removed": 0,
+      "notes": "Mapped modal StockCode descriptions"
+    },
+    {
+      "step": "detect_outliers",
+      "rows_before": 1026999,
+      "rows_after": 1026972,
+      "rows_removed": 27,
+      "notes": "Bulk orders flagged=13812, data errors dropped=27"
+    },
+    {
+      "step": "flag_missing_customers",
+      "rows_before": 1026972,
+      "rows_after": 797785,
+      "rows_removed": 229187,
+      "notes": "Customer-level valid rows=797785; product full rows=1026972"
+    },
+    {
+      "step": "filter_non_product_codes",
+      "rows_before": 1026972,
+      "rows_after": 1021328,
+      "rows_removed": 5644,
+      "notes": "Removed admin/postage codes for product-level basket table"
+    }
+  ],
+  "validation_reports": {
+    "pre_cleaning": {
+      "stage": "pre_cleaning",
+      "status": "PASSED",
+      "row_count": 1067371,
+      "min_invoice_date": "2009-12-01T07:45:00",
+      "max_invoice_date": "2011-12-09T12:50:00",
+      "null_rates": {
+        "invoice": 0.0,
+        "stock_code": 0.0,
+        "description": 0.004105,
+        "quantity": 0.0,
+        "invoice_date": 0.0,
+        "price": 0.0,
+        "customer_id": 0.227669,
+        "country": 0.0
+      }
+    },
+    "post_cleaning_customer": {
+      "stage": "post_cleaning_customer",
+      "status": "PASSED",
+      "row_count": 797785,
+      "min_invoice_date": "2009-12-01T07:45:00",
+      "max_invoice_date": "2011-12-09T12:50:00",
+      "null_rates": {
+        "invoice": 0.0,
+        "stock_code": 0.0,
+        "description": 0.0,
+        "quantity": 0.0,
+        "invoice_date": 0.0,
+        "price": 0.0,
+        "customer_id": 0.0,
+        "country": 0.0
+      }
+    },
+    "post_cleaning_product": {
+      "stage": "post_cleaning_product",
+      "status": "PASSED",
+      "row_count": 1021328,
+      "min_invoice_date": "2009-12-01T07:45:00",
+      "max_invoice_date": "2011-12-09T12:50:00",
+      "null_rates": {
+        "invoice": 0.0,
+        "stock_code": 0.0,
+        "description": 0.0,
+        "quantity": 0.0,
+        "invoice_date": 0.0,
+        "price": 0.0,
+        "customer_id": 0.222423,
+        "country": 0.0
+      }
+    }
+  }
+}

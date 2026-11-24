@@ -1,0 +1,216 @@
+project:
+  name: "Vantara Customer Behavior Prediction Platform"
+  company: "Vantara Retail Solutions"
+  seed: 42
+  log_level: "INFO"
+
+data:
+  uci_repo_id: 502
+  raw_excel_path: "data/raw/online_retail_II.xlsx"
+  raw_sheets:
+    - "Year 2009-2010"
+    - "Year 2010-2011"
+  raw_combined_path: "data/interim/raw_combined.parquet"
+  interim_customer_path: "data/interim/customer_transactions.parquet"
+  interim_product_path: "data/interim/product_transactions.parquet"
+  cleaning_audit_path: "data/interim/cleaning_audit.json"
+  processed_features_path: "data/processed/customer_features.parquet"
+  processed_product_pairs_path: "data/processed/product_associations.parquet"
+
+point_in_time:
+  cutoff_date: "2011-09-10"
+  churn_window_days: 90
+  min_purchases_before_cutoff: 1
+
+cleaning_rules:
+  max_null_rate: 0.30
+  min_valid_price: 0.01
+  max_valid_price: 10000.0
+  max_valid_abs_quantity: 50000
+  bulk_order_qty_threshold: 100
+  iqr_multiplier: 3.0
+  min_date: "2009-12-01"
+  max_date: "2011-12-10"
+  cancellation_prefix: "C"
+  non_product_stockcodes:
+    - "POST"
+    - "D"
+    - "M"
+    - "BANK CHARGES"
+    - "ADJUST"
+    - "ADJUST2"
+    - "C2"
+    - "DOT"
+    - "CRUK"
+    - "PADS"
+    - "AMAZONFEE"
+    - "S"
+    - "GIFT"
+    - "TEST001"
+    - "TEST002"
+
+splitting:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  cv_folds: 5
+  stratify_col: "churn_label"
+
+models:
+  churn:
+    decision_threshold: 0.45
+    smote_sampling_strategy: 0.75
+    logistic_regression:
+      C:
+        - 0.01
+        - 0.1
+        - 1.0
+        - 10.0
+      max_iter:
+        - 500
+      class_weight:
+        - "balanced"
+    random_forest:
+      n_estimators:
+        - 200
+        - 400
+      max_depth:
+        - 8
+        - 14
+      min_samples_split:
+        - 5
+        - 10
+      class_weight:
+        - "balanced"
+    xgboost:
+      n_estimators:
+        - 200
+        - 400
+      max_depth:
+        - 4
+        - 6
+      learning_rate:
+        - 0.03
+        - 0.08
+      subsample:
+        - 0.8
+      colsample_bytree:
+        - 0.8
+    lightgbm:
+      n_estimators:
+        - 200
+        - 400
+      num_leaves:
+        - 31
+        - 63
+      learning_rate:
+        - 0.03
+        - 0.08
+      class_weight:
+        - "balanced"
+    catboost:
+      iterations:
+        - 300
+        - 500
+      depth:
+        - 4
+        - 6
+      learning_rate:
+        - 0.03
+        - 0.08
+    keras_mlp:
+      hidden_units:
+        - 128
+        - 64
+        - 32
+      dropout_rate: 0.30
+      learning_rate: 0.001
+      batch_size: 64
+      epochs: 50
+      patience: 7
+
+  clv:
+    ridge:
+      alpha:
+        - 0.1
+        - 1.0
+        - 10.0
+        - 100.0
+    random_forest:
+      n_estimators:
+        - 200
+        - 400
+      max_depth:
+        - 8
+        - 14
+      min_samples_leaf:
+        - 3
+        - 6
+    xgboost:
+      n_estimators:
+        - 200
+        - 400
+      max_depth:
+        - 4
+        - 6
+      learning_rate:
+        - 0.03
+        - 0.08
+    lightgbm:
+      n_estimators:
+        - 200
+        - 400
+      num_leaves:
+        - 31
+        - 63
+      learning_rate:
+        - 0.03
+        - 0.08
+    keras_mlp:
+      hidden_units:
+        - 128
+        - 64
+        - 32
+      dropout_rate: 0.25
+      learning_rate: 0.001
+      batch_size: 64
+      epochs: 60
+      patience: 8
+
+  segmentation:
+    k_range:
+      - 3
+      - 4
+      - 5
+      - 6
+    default_k: 4
+    rfm_features:
+      - "recency_days"
+      - "frequency"
+      - "monetary_net"
+
+  recommender:
+    top_n: 5
+    min_support_count: 5
+
+artifacts:
+  dir: "models_artifacts"
+  preprocessor_path: "models_artifacts/preprocessor.joblib"
+  rfm_scaler_path: "models_artifacts/rfm_scaler.joblib"
+  best_churn_model_path: "models_artifacts/best_churn_model.joblib"
+  best_clv_model_path: "models_artifacts/best_clv_model.joblib"
+  kmeans_model_path: "models_artifacts/kmeans_segments.joblib"
+  recommender_rules_path: "models_artifacts/product_recommender.joblib"
+  shap_explainer_path: "models_artifacts/shap_explainer.joblib"
+  experiment_log_path: "models_artifacts/experiment_log.csv"
+  feature_columns_path: "models_artifacts/feature_columns.json"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  title: "Vantara Customer Behavior Prediction API"
+  version: "1.0.0"
+
+database:
+  url_env_var: "DATABASE_URL"
+  default_url: "postgresql://vantara_user:vantara_pass@localhost:5432/vantara_retail"
